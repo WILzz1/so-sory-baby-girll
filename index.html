@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            
+            /* Ganti 'background.jpg' dengan nama atau link file JPG kamu */
+            background: url('Will.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.92);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 85%;
+        }
+
+        h1 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .content-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.5;
+            margin: 0;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1 id="title">Ada Tebak-Tebakan Nih! 😃</h1>
+        
+        <div class="content-box">
+            <p id="message">
+                <strong>Tau gak minyak apa yang bikin mabuk?</strong><br>
+                Minyaksikan kamu tersenyum setiap hari ~
+            </p>
+        </div>
+
+        <button id="btnToggle" onclick="switchContent()">Buka Pesan Serius ❤️</button>
+    </div>
+
+    <script>
+        let isJoke = true;
+
+        function switchContent() {
+            const title = document.getElementById('title');
+            const message = document.getElementById('message');
+            const btn = document.getElementById('btnToggle');
+
+            if (isJoke) {
+                title.innerText = "Aku Minta Maaf Ya My honey baby girl ";
+                message.innerHTML = "Aku sadar aku ada salah sama kamu. Maafin aku ya sayang, aku janji bakal lebih ngertiin kamu lagi kedepannya.";
+                btn.innerText = "Lihat Joke Bapak-Bapak Lagi 🤣";
+                isJoke = false;
+            } else {
+                title.innerText = "Ada Tebak-Tebakan Nih! 😃";
+                message.innerHTML = "<strong>Tau gak minyak apa yang bikin mabuk?</strong><br>Minyaksikan kamu tersenyum setiap hari ~";
+                btn.innerText = "Buka Pesan Serius ❤️";
+                isJoke = true;
+            }
+        }
+    </script>
+
+</body>
+</html>
